@@ -1,7 +1,7 @@
 # LAB01: Names & Objects (binding), mutability, copy, GC (CPython)
 
 ## Short description of the lab
-The purpose of this lab is to demonstrate in Pyhon, names are bindings to objects, not variables in the traditional sense.
+The purpose of this lab is to demonstrate in Python, names are bindings to objects, not variables in the traditional sense.
 The following concepts are explored in the lab:
 - rebinding and mutation
 - passing arguments to functions
@@ -17,11 +17,14 @@ python -m venv .venv
 Activate the virtual environment:
 .venv\Scripts\activate
 
-## Comand to run the program
-To run the program, use the following comand:
+Install the required dependencies:
+pip install -r requirements.txt
+
+## Command to run the program
+To run the program, use the following command:
 python src/lab01.py
 
-## Descripion of Program Output
+## Description of Program Output
 The program prints six sections(A-F). Each section demonstrates a specific concept related to how Python works with names and objects.
 - **A - Binding / Rebinding** 
   Demonstrates that names in Python are bindings to objects and shows what happens when a name is rebound to another object.
