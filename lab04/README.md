@@ -31,7 +31,7 @@ venv\Scripts\activate # if you have Windows
 ```
 3. Install dependencies (if any):
 ```
-pip istall -r requirements.txt
+pip install -r requirements.txt
 ```
 **For this lab, *requirements.txt* is empty since no external libraries are needed.**
 
