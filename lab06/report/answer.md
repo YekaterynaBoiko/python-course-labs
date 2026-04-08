@@ -51,5 +51,6 @@ if not isinstance(other, Book):
    return False
 
 ```
+
 This also ensures compatibility with *mypy* ***--strict***.
    

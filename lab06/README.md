@@ -62,6 +62,7 @@ python -m mypy --strict src/lab06.py
 The code should produce:  
 *Success no issues found*  
   
+
 ## Lab description   
 In this lab, we explore the Python object model and object behavior: 
 - creating custom classes 
