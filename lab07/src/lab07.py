@@ -55,6 +55,17 @@ class StudentABC(SerializableABC):
     def serialize(self) -> str:
         return f"Student(name={self.name}, group={self.group}, average_grade={self.average_grade})"
 
+# ====================
+# Students datasource
+# ====================
+
+students_data_source = [
+    ("Yekateryna Boiko", "КН-124", 94.3),
+    ("Sofia Lytvynenko", "КН-124", 100.0),
+    ("Maryna Hysachenko", "ІПЗ-121", 88.7),
+    ("Vasya Petrenko", "Е-100", 63.4),
+    ("Mariia Kovalenko", "ПМ-211", 72.1)
+]
 
 # ====================
 # Testing
@@ -62,27 +73,31 @@ class StudentABC(SerializableABC):
 
 # Task A
 print("A) Regular class (duck typing)")
-student = StudentRegular("Yekateryna Boiko", "КН-124", 94.3)
-export(student)
+for name, group, average_grade in students_data_source:
+    student = StudentRegular(name, group, average_grade)
+    export(student)
 
 print("\n" + "-"*40 + "\n")
 
 # Task B
 print("B) Dataclass implementation")
-student_taskB = StudentData("Vasya", "ПМ-100", 63.9)
-export(student_taskB)
+for name, group, average_grade in students_data_source:
+    student_taskB = StudentData(name, group, average_grade)
+    export(student_taskB)
 
 print("\n" + "-"*40 + "\n")
 
 # Task C
 print("C) Slots")
-student_taskC = StudentSlots("Bob", "A-190", 75.4)
-export(student_taskC)
+for name, group, average_grade in students_data_source:
+    student_taskC = StudentSlots(name, group, average_grade)
+    export(student_taskC)
 
 print("\n" + "-"*40 + "\n")
 
 # Task D
 print("D) ABC version")
-student_taskD = StudentABC("Anton", "E-55", 87.2)
-print(student_taskD.serialize())
-export(student_taskD)
+for name, group, average_grade in students_data_source:
+    student_taskD = StudentABC(name, group, average_grade)
+    print(student_taskD.serialize()) # The line is drawn again when called
+    export(student_taskD)
