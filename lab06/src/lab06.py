@@ -106,4 +106,3 @@ books.sort()
 for book in books:
     print(book)
 
-print("\n" + "-"*40 + "\n")
