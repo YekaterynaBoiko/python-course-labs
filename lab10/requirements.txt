@@ -1,0 +1,9 @@
+# Lab 10 Requirements
+# No external dependencies are required for this project
+
+# The project uses only Python standard library:
+# - argparse
+# - logging
+# - pathlib
+# - json
+# - re
